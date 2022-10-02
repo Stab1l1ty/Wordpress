@@ -1,0 +1,548 @@
+/* Подключение шрифтов локально с компа */
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('../fonts/Roboto-Black.eot');
+    src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Black.woff') format('woff'),
+         url('../fonts/Roboto-Black.ttf') format('truetype'),
+         url('../fonts/Roboto-Black.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold.woff') format('woff'),
+         url('../fonts/Roboto-Bold.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold.svg#../fonts/Roboto-Bold') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../fonts/Roboto-Light');
+    src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light.woff') format('woff'),
+         url('../fonts/Roboto-Light.ttf') format('truetype'),
+         url('../fonts/Roboto-Light.svg#../fonts/Roboto-Light') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Medium.woff') format('woff'),
+         url('../fonts/Roboto-Medium.ttf') format('truetype'),
+         url('../fonts/Roboto-Medium.svg#../fonts/Roboto-Medium') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'RobotoCondensed-Regular';
+    src: url('../fonts/RobotoCondensed-Regular.eot');
+    src: url('../fonts/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/RobotoCondensed-Regular.woff') format('woff'),
+         url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'),
+         url('../fonts/RobotoCondensed-Regular.svg#RobotoCondensed-Regular') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Шаблон всех Элементов */
+* {
+/* Правильное отображение св-в высоты и ширины с учётом MARGIN, PADDING */
+    box-sizing: border-box;
+/* Сбрасываем все значения по умолчанию */
+    margin: 0;
+    padding: 0;
+    
+}
+.promo {
+    height: 802px;
+    
+    /* Вставляем задний фон макета (main.img) */
+    /* background-repeat: no-repeat; - не повторяется картинка */
+    /* center center  указываем, что img стоит по центру относительно оси Х и оси Y*/
+    /*Cover - размер картинки (Cover - растягиваем на весь экран)*/
+    background: url('../img/background/main_bg1.jpg') center center / Cover no-repeat;
+    padding: 38px 0 62px 0;
+}
+
+
+/* Container БЛОК */
+.container {
+    width: 1140px;
+/* Ставим блочные элементы по центру блоков */
+    margin: 0 auto; 
+    position: relative;
+}
+
+/* Class logo.img внутри class logo в блоке container */
+.logo .logo_img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Class logo.text внутри class logo в блоке container*/ *
+.logo .logo_text {
+    font-family: 'Roboto-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    /* Межстрочный интервал */
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    /* Нужно опустить ниже текст от лого как в макете */
+    margin-top: 9.5px;
+}
+
+/* Style for first section (Title заголовки) */
+h1 {
+    margin-top: 53px;
+}
+
+.title {
+    font-family: 'Roboto-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 41px;
+    line-height: 41px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F9BF3B;
+}
+
+/* title h2, у которого есть class title (без пробела) */
+h2.title{
+margin-top: 20.5px;
+}
+
+/* Внутри class будет еще один class (Title_big заголовок) */
+.simple .title_big {
+    font-family: 'Roboto-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    /* line-height: 80px; */
+    margin-top: 20.5px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+/* Style для текста в section "promo" */
+.promo .promo_text {
+    padding: 0 13px;
+    margin-top: 22.5px;
+    font-family: 'Roboto-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 21px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Style для span в section "promo" */
+.promo .promo_text span {
+    color: #F9BF3B;
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 28px;
+}
+
+/* Style для button в section "promo" */
+.promo .promo_button {
+    /* тег button по умолчанию стоит inline-block (блочно-строчный элемент)
+    нужно добавить display - block */
+    display: block;
+    width: 313px;
+    height: 72px;
+    margin: 0 auto;
+    margin-top: 72px;
+    text-align: center;  
+    /* border  граница solid - сплошная */
+    border: 4px solid rgba(0, 0, 0, 0.23);
+    /* Градиент перелива цвета, сверху более светлая, ниже - темнее
+    linear-gradient, если "to top", то он идет как бы вверх и цвета в каких % */
+    background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%);
+    /* Тень, которую отбрасывает наш блок
+    (inset - внутрь) 
+    0px - смещение по оси Х, положительное вправо, отрицательное влево
+    0px - смещение вертикально по оси У, низ положительно, верх отрицательное
+    10px - размытие тени
+    цвет (0,0,0, черный и 0.4 - альфа канал прозрачности тени) */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+/* Записаться на интенсив!  Стилизуем сам текст */
+    font-family: 'RobotoCondensed-Regular';
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
+    /* Оживляем курсор при наведении на кнопку */
+    cursor: pointer;
+    /* Убрать обводку вокруг кнопки, при наведении */
+    outline: none;
+}
+
+/* Style for icon_down (узнать больше об интенсиве) */
+.more {
+    margin-top: 70.5px;
+    
+}
+
+.more .more_text {
+    font-family: 'Roboto-Light';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.more .more_img {
+    /* Картинка будет отдельным блоком, которую хочу поставить по центру */
+    display: block;
+    margin: 0 auto;
+    margin-top: 4.49px;
+}
+
+
+/* Секция (Что вас ждет в интенсиве) */
+.waiting {
+    background-color: rgba(239, 239, 239, 1);
+    /* Чтобы в будущем при изменении блока. Например, доабвлении текста и т.д, он не вылез за секцию, нужно поставить "min-hight: 607;"
+    height: 607px; */
+    min-height: 607px;
+    padding: 84px 0 75px 0;
+}
+
+/* Style for title в Секции (Что вас ждет в интенсиве) */
+.waiting .waiting_header {
+    font-family: 'RobotoCondensed-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #252525;
+    border: 1px solid #000000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Style for devider в Секции (Что вас ждет в интенсиве) */
+.waiting .waiting_devider {
+    width: 220px;
+    height: 7px;
+    background: #F9BF3B;
+    margin: 0 auto;
+    margin-top: 18px;
+    
+}
+
+/* Style for devider в Секции (Что вас ждет в интенсиве) */
+.waiting .waiting_subheader {
+    margin: 0 auto;
+    margin-top: 18.5px;
+    width: 619px;
+    height: 20px;
+    font-family: 'RobotoCondensed-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    text-align: center;
+    color: #4A4A4A;
+}
+
+/* Style for wrapper общая обертка в Секции (Что вас ждет в интенсиве) */
+.waiting .waiting_wrapper {
+    display: flex;
+    /* Выравниваем блоки с помощью Flex. равномерно по главной оси. */
+    /* Выравниваем с помощью justify-content: space-between; */
+    justify-content: space-between;
+    margin-top: 45.5px;
+    }
+
+/* Style for wrapper блоков в обертке в Секции (Что вас ждет в интенсиве) */
+.waiting .waiting_wrapper .waiting_item {
+    /* переводим блоки в строчно-блочные */
+    /* display: inline-block; - убрали его, чтобы работать с флексами */
+    /* Прижимаем все элементы к верхнему краю */
+    /* vertical-align: top; - убрали, чтобы работать с Флексами */
+    text-align: center;
+    /* margin: 0 15px; - убрали, чтобы работать с Флексами */
+    width: 339px;
+}
+    
+/* Чтобы при замене, например, картинки в блоке, она не вылезала и не поплыла по верстке, нам нужно установить ширину картинки от нашего родителя  */
+.waiting .waiting_wrapper .waiting_item .waiting_img {
+    width: 100%;
+    /* Если задать высоту, то мы её ограничим, и большая картинка сплющится */
+}
+
+/* Style for wrapper блока img_description*/
+.waiting .waiting_wrapper .waiting_item .waiting_description {
+    margin-top: 26px;
+    font-family: 'Roboto-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    align-items: center;
+    line-height: 21px;
+}
+
+/* Style for optimization в Секции (Что такое оптимизация) */
+.optimization {
+    min-height: 550px;
+    padding: 108px 0 27px 0;
+}
+
+/* Style for optimization_header в Секции (Что такое оптимизация)*/
+.optimization .optimization_header {
+    margin-left: 391px;
+    font-family: 'Roboto-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #299CBD;
+}
+
+/* Style for optimization_text в Секции (Что такое оптимизация */
+.optimization .optimization_text {
+    margin-left: 391px;
+    margin-top: 25px;
+    font-family: 'Roboto-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 27px;
+    color: #4A4A4A;
+} 
+.optimization .optimization_text span {
+    font-family: 'Roboto-Bold';
+    font-weight: 700;
+}
+
+/* Чтобы картинку поставить в абсолютное позиционирование, нужно вернуться в родитель (контейнер) в самом начале и в нем поставить position: relative */
+/* Style for optimization_img в Секции (Что такое оптимизация */
+.optimization .optimization_img {
+    position: absolute;
+    top: -47px;
+    left: -240px;
+    /* Чтобы текст был поверх картинки, устанавливаем Z-index */
+    z-index: -1;
+}
+
+/* Style for section finish в Секции (По окончании обучения Вы сможете!) */
+.finish {
+    min-height: 447px;
+    padding: 86px 0 68.5px 0;
+    background: url('../img/background/second_bg.jpg') center center / Cover no-repeat;
+
+}
+
+.finish .finish_header {
+    font-family: 'RobotoCondensed-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #EFEFEF;
+    
+}
+
+.finish .finish_devider {
+    width: 220px;
+    height: 7px;
+    background: #F9BF3B;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+
+/* Style  finish_wrapper в Секции (По окончании обучения Вы сможете!) */
+.finish .finish_wrapper {
+    margin-top: 39px;
+    display: flex;
+    /* меняяем столбец на строки */
+    flex-direction: row;
+    /* размещаем равномерно */
+    justify-content: space-between;
+}
+
+/* Style  finish_item в Секции (По окончании обучения Вы сможете!) */
+.finish .finish_wrapper .finish_item {
+    /* Берем ширину самого большо эл-та */
+    width: 234px;
+}
+
+/* Style  finish_round в Секции (По окончании обучения Вы сможете!) */
+.finish .finish_wrapper .finish_item .finish_round {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* выравниваем круги по горизонтали */
+    margin: 0 auto;
+    width: 115px;
+    height: 115px;
+    background: #B4E2FF;
+    /* у нас сейчас получился квадрат
+    Чтобы сделать круг, нужно воспользоваться св-вом скругления углов */
+    border-radius: 100%;
+}
+
+/* Style  finish_description в Секции (По окончании обучения Вы сможете!) */
+.finish .finish_wrapper .finish_item .finish_description {
+    margin-top: 24.5px;
+    font-family: 'Roboto-Light';
+    color: #EFEFEF;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* Style  for section "gifts"  */
+.gifts {
+    min-height: 628px;  
+    background: #EFEFEF;
+    padding: 88px 0 88px 0;
+}
+
+/* Style  .gift_icon  for section "gifts"  */
+.gifts .logo_gift .gift_icon {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style  .gift_text  for section "gifts"  */
+.gifts .gift_text {
+    margin-top: 45px;
+    font-family: 'RobotoCondensed-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    text-align: center;
+    color: #252525;
+}
+
+/* Style  .button_gift  for section "gifts"  */
+.gifts .button_gift {
+    display: block;
+    width: 313px;
+    height: 72px;
+    margin: 0 auto;
+    margin-top: 51px;
+    background: linear-gradient(0deg, #2798B9 0%, #3AB6DA 100%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    font-family: 'RobotoCondensed-Regular';
+    font-size: 21px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.22);
+}
+
+/* Style   for section "webinar"  */
+.webinar {
+    display: block;
+    background: #FFFFFF;
+    padding: 89px 0 52.5px 0;
+    min-height: 512px;
+}
+
+/* Style  .webinar_img  for section "webinar"  */
+.webinar .logo_webinar .webinar_img {
+    width: 342px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Style  .subheader_webinar  for section "webinar"  */
+.webinar .subheader_webinar {
+    padding-top: 36px;
+    font-family: 'RobotoCondensed-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #252525;
+}
+
+/* Style  .header_webinar  for section "webinar"  */
+.webinar .header_webinar {
+    padding-top: 30px;
+    font-family: 'Roboto-Black';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #299CBD;
+}
+
+/* Style  .text_webinar  for section "webinar"  */
+.webinar .text_webinar {
+    padding-top: 24.5px;
+font-family: 'RobotoCondensed-Regular';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+text-align: center;
+color: #4A4A4A;
+}
+
+/* Style  for section "footer"  */
+footer{
+    min-height: 167px;
+    background: #1A1A1A;
+    padding: 57px 0 69px 0;
+}
+
+/* Style  .info for section "footer"  */
+.info {
+    margin: 0 auto;
+    width: 407px;
+    font-family: 'Roboto-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+    line-height: 21px;
+    color: #888888;  
+}
+    
+footer a {
+    font-family: 'Roboto-Light';
+    color: #888888;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    text-decoration: none;
+}
+
+.underline{
+    text-decoration: underline;
+}    
+    
+    
+
+
